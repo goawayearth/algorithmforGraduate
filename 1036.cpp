@@ -35,3 +35,37 @@ int main(){
 		}
 	}
 }
+
+
+/*
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+int main(){
+	string s;
+	stack<int> stack1;
+	map<int,int> map1; 
+	while(cin>>s){
+		map1.clear();
+		for(int i=0;i<s.size();i++){
+			if(s[i] == '('){
+				stack1.push(i+1);
+			}
+			else{
+				map1.insert(make_pair(stack1.top(),i+1));
+				stack1.pop();
+			}
+			
+		}
+		map<int,int>::iterator it;
+		for(it=map1.begin();it!=map1.end();it++){
+			printf("%d %d\n",it->first,it->second);
+		}
+	}
+}
+
+
+*/
