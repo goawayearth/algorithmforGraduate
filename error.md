@@ -1,3 +1,3 @@
 - while循环中，每次循环之后没有清空set
 - 删除pos和pos+1的数据的时候写的是vec.erase(vec.begin()+pos);vec.erase(vec.begin()+pos+1);这样是不对的，因为第一个删除会造成第二个向前移动。
-- 
+- 边界条件考虑不全

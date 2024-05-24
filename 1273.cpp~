@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+#define MAX 100000
+int main(){
+  int n,m,q;
+  scanf("%d %d %d",&n,&m,&q);
+  int A[MAX];int B[MAX];int C[MAX];
+  for(int i=0;i<n;i++){
+    scanf("%d",&A[i]);
+  }
+  for(int i=0;i<m;i++)
+    scanf("%d",&B[i]);
+  for(int i=0;i<q;i++)
+    scanf("%d",&C[i]);
+  int a,b,c;
+  a = b = c = 0;
+  while(a<n && b<m && c<q){
+    if(A[a]>B[b] && A[a]>C[c]){b++;c++;};
+    else if(B[b]>A[a] && B[b]>C[c]){a++;c++;}
+    else if(C[c]>A[a] && C[c]>B[b]){a++;b++;}
+    else if(A[a]==B[b] && A[a]==C[c])printf("%d ",A[a]);
+  }
+  printf("\n");
+}
